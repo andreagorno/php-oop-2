@@ -1,22 +1,11 @@
 <?php
 
-class Products {
-    private $name;
-    private $category;
-    private $description;
-    private $price;
-
-    function __construct ($name, $category, $description, $price) {
-        $this->name = $name;
+class Product {
+    public $category;
+    public $category_info;
+    
+    function __construct ($category, $category_info) {
         $this->category = $category;
-        $this->description = $description;
-        $this->price = $price;
-    }
-
-    public function setPrice($net_price) {
-        $this->price = $net_price + ($net_price * 22 / 100);
-        return $this->price;
-    }
+        $this->category_info = $category_info;
+    }    
 };
-
-
